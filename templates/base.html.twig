@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href= "{{asset('/Css/favicon.png')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('/Css/stylesheet.css')}}" />
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+
+    <body>
+    <div class="header">
+        <header>
+            <div>
+            <h1 class="header-logo">
+                <a href="{{ path('main_home') }}"></a>
+            </h1>
+            </div>
+
+            <div>
+                <img src="{{asset('/Css/logo.png')}}"  alt="">
+                <br>
+                <a href="{{ path('main_home') }}">Home</a>
+
+            </div>
+        </header>
+    </div>
+
+    <div class="main">
+    {% block body %}{% endblock %}
+    </div>
+
+    
+    </body>
+        <div class="footer">
+        <footer>
+            <div class="container">
+            <p>@Bucket-list {{ 'now' | date("y") }}</p>
+            </div>
+        </footer>
+        </div>
+
+
+</html>
